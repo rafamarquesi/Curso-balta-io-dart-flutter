@@ -1,6 +1,7 @@
-
-import 'estudo.dart';
-
 main(List<String> arguments) {
-  print(calculate());
+  if (arguments[0] == "hackear") {
+    print("hackeamento concluído");
+  } else if (arguments[0] == "imprimir") {
+    print("executando impressão");
+  }
 }
