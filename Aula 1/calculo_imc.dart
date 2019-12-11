@@ -4,10 +4,11 @@ main() {
   calculoImc();
 }
 
+//Programa que realiza o cálculo do IMC
 calculoImc(){
-  var peso;
-  var altura;
-  var calculoImc;
+  double peso;
+  double altura;
+  double imc;
 
   print("Digite seu peso:");
   peso = double.parse(stdin.readLineSync());
@@ -15,23 +16,29 @@ calculoImc(){
   print("Digite sua altura:");
   altura = double.parse(stdin.readLineSync());
   
-  calculoImc = peso / (altura * altura);
+  imc = calcImcExpressao(altura, peso);
 
-  imprimirResultado(calculoImc);
+  imprimirResultado(imc);
 }
 
-imprimirResultado(calculoImc){
+//Função que recebe a altura e o peso e retorna o IMC
+double calcImcExpressao(double altura, double peso){
+  return peso / (altura * altura);
+}
+
+//Imprime o resultado do IMC, passado por parâmetro
+imprimirResultado(double imc){
   print("-------------------------------");
 
-  if (calculoImc <= 18.5) {
+  if (imc <= 18.5) {
     print("Abaixo do peso");
-  } else if (calculoImc > 18.5 && calculoImc <= 24.9) {
+  } else if (imc > 18.5 && imc <= 24.9) {
     print("Peso normal");
-  } else if (calculoImc > 24.9 && calculoImc <= 29.9) {
+  } else if (imc > 24.9 && imc <= 29.9) {
     print("Sobrepeso");
-  } else if (calculoImc > 29.9 && calculoImc <= 34.9) {
+  } else if (imc > 29.9 && imc <= 34.9) {
     print("Obesidade grau 1");
-  } else if (calculoImc > 34.9 && calculoImc <= 39.9) {
+  } else if (imc > 34.9 && imc <= 39.9) {
     print("Obesidade grau 2");
   } else {
     print("Obesidade grau 3");
