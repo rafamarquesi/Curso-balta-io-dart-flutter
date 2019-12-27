@@ -1,8 +1,11 @@
-# aog
+# aog (Álcool ou Gasolina)
 
-A new Flutter project.
+Flutter project.
+Projeto do balta.io, para calcular se compensa Álcool ou Gasolina.
 
-## Getting Started
+## APP desenvolvido no curso do Balta.io
+
+- [Link para o curso](https://app.balta.io/courses/7192)
 
 This project is a starting point for a Flutter application.
 
